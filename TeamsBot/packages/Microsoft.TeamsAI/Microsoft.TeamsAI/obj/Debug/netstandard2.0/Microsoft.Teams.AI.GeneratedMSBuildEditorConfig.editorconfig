@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Microsoft.Teams.AI
+build_property.ProjectDir = C:\projects\teamsai\dotnet\packages\Microsoft.TeamsAI\Microsoft.TeamsAI\

@@ -1,0 +1,4 @@
+Based on sample from TeamsAI:
+https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot
+
+TeamsAI library was changed to fix issue with using ChatGPT Turbo model!
