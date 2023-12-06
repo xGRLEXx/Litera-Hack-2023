@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Interact with AI";
+}
+
+<div class="control-panel">
+    <h2>How can I help you?</h2>
+
+    <form asp-controller="AI" asp-action="AskQuestion" method="get" id="questionForm">
+        <textarea id="question" name="question" class="rounded-box" rows="4" cols="50">@ViewBag.Question</textarea>
+        <div>
+            <input type="submit" value="Send question" id="sendButton">
+        </div>        
+    </form>
+
+    @if (!String.IsNullOrEmpty(ViewBag.Answer))
+    {
+        <div id="resultSection">
+            <h2>Answer:</h2>
+            <p>@ViewBag.Answer</p>
+        </div>
+    }
+</div>
+
+<style>
+    .rounded-box {
+        border: 1px solid #000; /* Adjust as needed */
+        border-radius: 10px; /* Adjust as needed */
+        padding: 20px; /* Adjust as needed */
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $('#questionForm').on('submit', function () {
+            $('#sendButton').attr('disabled', 'disabled');
+            $('#resultSection').empty();
+        });
+    });
+</script>
